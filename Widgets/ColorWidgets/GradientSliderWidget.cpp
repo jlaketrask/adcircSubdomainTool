@@ -274,12 +274,24 @@ void GradientSliderWidget::CheckSliderCount()
 
 void GradientSliderWidget::CreateDefaultSliders()
 {
-	unsigned int bottomSlider = AddSlider();
-	unsigned int topSlider = AddSlider();
-	SetSliderValue(bottomSlider, minValue);
-	SetSliderValue(topSlider, maxValue);
-	SetSliderColor(bottomSlider, QColor::fromRgb(0, 0, 255));
-	SetSliderColor(topSlider, QColor::fromRgb(0, 255, 0));
+        unsigned int bottomSlider = AddSlider();
+        unsigned int topSlider = AddSlider();
+        unsigned int midSlider = AddSlider();
+        unsigned int midTopSlider = AddSlider();
+        unsigned int midMidTopSlider = AddSlider();
+        unsigned int midBottomSlider = AddSlider();
+        SetSliderValue(bottomSlider, minValue);
+        SetSliderValue(topSlider, maxValue);
+        SetSliderValue(midSlider, 0.0);
+        SetSliderValue(midTopSlider,0.5);
+        SetSliderValue(midMidTopSlider, 1.75);
+        SetSliderValue(midBottomSlider, -0.5);
+        SetSliderColor(bottomSlider, QColor::fromRgb(0, 0, 255));
+        SetSliderColor(topSlider, QColor::fromRgb(0, 100, 0));
+        SetSliderColor(midSlider, QColor::fromRgb(255,255,255));
+        SetSliderColor(midTopSlider, QColor::fromRgb(0,255,0));
+        SetSliderColor(midMidTopSlider, QColor::fromRgb(0,175,0));
+        SetSliderColor(midBottomSlider, QColor::fromRgb(0,255,255));
 }
 
 
